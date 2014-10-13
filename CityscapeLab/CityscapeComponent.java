@@ -6,8 +6,8 @@ import javax.swing.JComponent;
  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
  *  cityscape to these object.
  * 
- * @author @gcschmit
- * @version 18 July 2014
+ * @author Bradley Guan
+ * @version 7 October 2014
  */
 public class CityscapeComponent extends JComponent
 {
@@ -28,8 +28,25 @@ public class CityscapeComponent extends JComponent
         
         // create instances of classes and invoke the draw method on each
         // ...
+        Building building1 = new Building(100, 300);
+        Building building2 = new Building(300, 300);
+        Building building3 = new Building(500, 300);
+        Tree tree1 = new Tree(680, 320);
+        Tree tree2 = new Tree(30, 320);
+        Road road1 = new Road(0, 440);
+        Sun sun1 = new Sun(500, 100);
+        Background background1 = new Background(0, 0);
+        int x = getWidth();
+        int y = getHeight();
         
-        
+       background1.draw(g2);
+       building1.draw(g2);
+       building2.draw(g2);
+       building3.draw(g2);
+       road1.draw(g2);
+       sun1.draw(g2);
+       tree1.draw(g2);
+       tree2.draw(g2);
     }
 
 }
